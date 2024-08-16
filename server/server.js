@@ -13,10 +13,9 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-  origin: 'https://book-search-engine-8pil.onrender.com',
+  origin: 'https://googlebooks-1-18ao.onrender.com',
   credentials: true, // if you need to pass cookies or other credentials
 };
-
 app.use(cors(corsOptions));
 
 // Connect to MongoDB
