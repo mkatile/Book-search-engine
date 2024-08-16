@@ -8,9 +8,9 @@ export default defineConfig({
     port: 3000,
     open: true,
     proxy: {
-      '/api': {
+      '/graphql': {
         target: 'https://book-search-engine-1-wxyp.onrender.com/',
-        secure: false,
+        secure: true,
         changeOrigin: true
       }
     }
