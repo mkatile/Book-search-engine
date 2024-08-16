@@ -18,6 +18,10 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
+// Handle preflight requests
+app.options('*', cors(corsOptions)); // Handle OPTIONS requests for all routes
+
+
 // Connect to MongoDB
 connectDB();
 
