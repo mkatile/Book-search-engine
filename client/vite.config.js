@@ -9,7 +9,7 @@ export default defineConfig({
     open: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:4000',
+        target: 'https://book-search-engine-1-wxyp.onrender.com/',
         secure: false,
         changeOrigin: true
       }
