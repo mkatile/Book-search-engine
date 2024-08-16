@@ -13,6 +13,7 @@ node_modules
 
 # But not this file
 !/dist/index.html
+!/dist/server.js
 dist-ssr
 *.local
 
