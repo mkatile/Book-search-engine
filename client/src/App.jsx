@@ -6,7 +6,7 @@ import Navbar from './components/Navbar';
 
 // Create an HTTP link to connect to your Apollo Server
 const httpLink = createHttpLink({
-  uri: 'https://googlebooks-amsg.onrender.com/', // Full URL of the GraphQL server
+  uri: 'http://localhost:4000/graphql', // Full URL of the GraphQL server
 });
 
 // Create an authentication link to include the token in the headers
