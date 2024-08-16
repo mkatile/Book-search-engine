@@ -15,12 +15,12 @@ const app = express();
 const corsOptions = {
   origin: 'https://googlebooks-1-18ao.onrender.com',
   credentials: true, // if you need to pass cookies or other credentials
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 };
+
+// Apply CORS middleware
 app.use(cors(corsOptions));
-
-// Handle preflight requests
-app.options('*', cors(corsOptions)); // Handle OPTIONS requests for all routes
-
 
 // Connect to MongoDB
 connectDB();
