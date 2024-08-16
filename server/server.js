@@ -1,6 +1,7 @@
 const { ApolloServer } = require('apollo-server-express');
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 const connectDB = require('./config/connection');
 const routes = require('./routes');
 const typeDefs = require('./schemas/typeDefs');
@@ -9,6 +10,14 @@ const { authMiddleware } = require('./utils/auth');
 
 const PORT = process.env.PORT || 4000;
 const app = express();
+
+// CORS configuration
+const corsOptions = {
+  origin: 'https://book-search-engine-8pil.onrender.com',
+  credentials: true, // if you need to pass cookies or other credentials
+};
+
+app.use(cors(corsOptions));
 
 // Connect to MongoDB
 connectDB();
