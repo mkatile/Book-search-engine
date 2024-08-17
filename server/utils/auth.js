@@ -6,6 +6,11 @@ const expiration = "2h";
 
 module.exports = {
   authMiddleware: function ({ req }) {
+    // Skip authentication for OPTIONS requests
+    if (req.method === 'OPTIONS') {
+      return { user: null };
+    }
+
     let token = req.body.token || req.query.token || req.headers.authorization;
 
     if (req.headers.authorization) {
